@@ -51,6 +51,7 @@
     </div>
     {% endif %}
 
+    {% if summary and tech_stack and dev_output and qa_output and infra_output %}
     <form method="POST" action="/download/txt">
       <input type="hidden" name="idea" value="{{ request.form.idea }}">
       <button type="submit">⬇ Download as .TXT</button>
@@ -60,6 +61,7 @@
       <input type="hidden" name="idea" value="{{ request.form.idea }}">
       <button type="submit">⬇ Download as .PDF</button>
     </form>
+    {% endif %}
 
   </div>
 </body>
