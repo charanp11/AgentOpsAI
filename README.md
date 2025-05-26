@@ -1,24 +1,27 @@
 # AgentOps 🧠🤖
 
-AgentOps is an AI-powered project planning tool that takes your project idea or GitHub repo and gives you:
+AgentOps is a smart AI-powered project planning tool that takes your project idea or GitHub repo and gives you:
 
-- ✅ Summary of your idea
-- 💡 Suggested Tech Stack
-- 🧑‍💻 Developer agent folder structure & tools
-- 🧪 QA agent test strategy
-- ☁️ Infra agent with AWS/CDK suggestions
-- 📥 Download full report as `.txt` or `.pdf`
+- ✅ A clear project summary
+- 💡 An ideal tech stack tailored to your idea
+- 🧑‍💻 Developer agent insights (folder structure, libraries, languages)
+- 🧪 QA agent strategy with test cases & frameworks
+- ☁️ Infra agent recommendations (AWS, CDK, security)
+- 📥 Downloadable project report as `.txt` or `.pdf`
+
+---
 
 ## 🛠 Tech Stack
 
-- Flask
-- Claude 3 Haiku via Amazon Bedrock
-- LangChain-style agent prompts
-- HTML/CSS (dark mode responsive UI)
-- Render deployment
+- **Flask** (Python backend)
+- **Claude 3 Haiku** via **Amazon Bedrock**
+- **LangChain-style agents** (Dev, QA, Infra)
+- **AWS CDK** (infrastructure as code)
+- **Bootstrap** (clean, responsive UI)
+- **Render** (free-tier deployment)
 
-## 🚀 Live Link
-*(will be added after deployment)*
+---
 
+## 🌐 Live Demo
 
-
+👉 [AgentOps 🤖](https://agentopsai.onrender.com)
