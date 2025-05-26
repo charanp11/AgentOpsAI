@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgentOps 💡</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade-in">AgentOps 🤖</h1>
+    <p class="fade-in">Describe your project idea and let the AI agents take over.</p>
+
+    <form method="POST" class="fade-in delay-1">
+      <input type="text" name="idea" placeholder="Enter your project idea..." required />
+      <button type="submit">Generate Insights</button>
+    </form>
+
+    {% if summary %}
+    <div class="result fade-in delay-2">
+      <h2>📝 Summary</h2>
+      <p>{{ summary }}</p>
+    </div>
+    {% endif %}
+
+    {% if tech_stack %}
+    <div class="result fade-in delay-3">
+      <h2>🧰 Suggested Tech Stack</h2>
+      <pre>{{ tech_stack }}</pre>
+    </div>
+    {% endif %}
+
+    {% if dev_output %}
+    <div class="result fade-in delay-4">
+      <h2>🧑‍💻 Developer Agent Says</h2>
+      <pre>{{ dev_output }}</pre>
+    </div>
+    {% endif %}
+
+    {% if qa_output %}
+    <div class="result fade-in delay-5">
+      <h2>🧪 QA Agent Suggests</h2>
+      <pre>{{ qa_output }}</pre>
+    </div>
+    {% endif %}
+
+    {% if infra_output %}
+    <div class="result fade-in delay-6">
+      <h2>☁️ Infra Agent Recommends</h2>
+      <pre>{{ infra_output }}</pre>
+    </div>
+    {% endif %}
+
+    <form method="POST" action="/download/txt">
+      <input type="hidden" name="idea" value="{{ request.form.idea }}">
+      <button type="submit">⬇ Download as .TXT</button>
+    </form>
+
+    <form method="POST" action="/download/pdf">
+      <input type="hidden" name="idea" value="{{ request.form.idea }}">
+      <button type="submit">⬇ Download as .PDF</button>
+    </form>
+
+  </div>
+</body>
+</html>
