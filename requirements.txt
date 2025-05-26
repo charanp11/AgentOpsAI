@@ -1,4 +1,5 @@
-flask
+Flask
+gunicorn
 boto3
-python-dotenv
+fpdf
 xhtml2pdf
