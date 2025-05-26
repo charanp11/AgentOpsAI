@@ -6,6 +6,7 @@ from agents.qa_agent import qa_agent_suggestion
 from agents.infra_agent import infra_agent_suggestion
 from io import BytesIO
 from xhtml2pdf import pisa
+import os
 
 
 app = Flask(__name__)
@@ -71,4 +72,5 @@ AgentOps AI Report 📋
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
