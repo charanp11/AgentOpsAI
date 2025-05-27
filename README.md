@@ -79,6 +79,6 @@ agentops/
 
 ```bash
 git clone https://github.com/charanp11/AgentOpsAI.git
-cd AgentOpsAI
+cd agentops
 pip install -r requirements.txt
 python app.py
