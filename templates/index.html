@@ -12,8 +12,8 @@
     <p class="fade-in">Describe your project idea and let the AI agents take over.</p>
 
     <form method="POST" class="fade-in delay-1">
-      <input type="text" name="idea" placeholder="Enter your project idea..." required />
-      <button type="submit">Generate Insights</button>
+      <input type="text" name="idea" placeholder="Type your idea or GitHub repo URL..." required />
+      <button type="submit">Generate Insights 💡</button>
     </form>
 
     {% if summary %}
@@ -61,7 +61,18 @@
       <input type="hidden" name="idea" value="{{ request.form.idea }}">
       <button type="submit">⬇ Download as .PDF</button>
     </form>
-    {% endif %}
+
+    <form method="POST" action="/generate_code">
+      <input type="hidden" name="idea" value="{{ request.form.idea }}">
+      <input type="hidden" name="tech_stack" value="{{ tech_stack }}">
+      <button type="submit">💡 Show Generated Code</button>
+    </form>
+
+    <form method="POST" action="/generate_infra">
+      <input type="hidden" name="idea" value="{{ request.form.idea }}">
+      <button type="submit">🧱 Show Infra Stack</button>
+    </form>
+    {% endif %} 
 
   </div>
 </body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgentOps Results 🚀</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade-in">AgentOps Results 🔍</h1>
+
+    {% if code %}
+      <div class="result fade-in delay-2">
+        <h2>💡 Generated Starter Code</h2>
+        <pre>{{ code }}</pre>
+      </div>
+    {% endif %}
+
+    {% if infra_code %}
+      <div class="result fade-in delay-3">
+        <h2>🧱 Generated CDK Infra Stack</h2>
+        <pre>{{ infra_code }}</pre>
+      </div>
+    {% endif %}
+
+    {% if code or infra_code %}
+      <form method="POST" action="/download_zip">
+        <input type="hidden" name="idea" value="{{ request.form.idea }}">
+        <input type="hidden" name="tech_stack" value="{{ request.form.tech_stack }}">
+        <button type="submit">⬇ Download ZIP</button>
+      </form>
+    {% endif %}
+  </div>
+</body>
+</html>
