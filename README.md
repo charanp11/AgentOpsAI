@@ -56,6 +56,8 @@ AgentOpsAI is a full-stack project planning assistant that transforms your proje
 
 👉 [AgentOps 🤖](https://agentopsai.onrender.com)
 
+---
+
 <details>
 <summary>📁 Click to view project structure</summary>
 
